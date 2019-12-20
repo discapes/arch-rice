@@ -148,13 +148,13 @@ chatnets = {
 channels = (
   { name = "#lobby"; chatnet = "EsperNet"; autojoin = "No"; },
   { name = "#freenode"; chatnet = "Freenode"; autojoin = "No"; },
-  { name = "#irssi"; chatnet = "Freenode"; autojoin = "yes"; },
   { name = "#gamesurge"; chatnet = "GameSurge"; autojoin = "No"; },
   { name = "#irssi"; chatnet = "IRCNet"; autojoin = "No"; },
   { name = "#ircsource"; chatnet = "IRCSource"; autojoin = "No"; },
   { name = "#netfuze"; chatnet = "NetFuze"; autojoin = "No"; },
   { name = "#oftc"; chatnet = "OFTC"; autojoin = "No"; },
-  { name = "silc"; chatnet = "SILC"; autojoin = "No"; }
+  { name = "silc"; chatnet = "SILC"; autojoin = "No"; },
+  { name = "##linux"; chatnet = "freenode"; autojoin = "yes"; }
 );
 
 aliases = {
@@ -316,4 +316,25 @@ settings = {
     nick = "discape";
   };
   "fe-text" = { actlist_sort = "refnum"; };
+};
+windows = {
+  1 = { immortal = "yes"; name = "(status)"; level = "ALL"; };
+  2 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "##linux";
+        tag = "Freenode";
+      }
+    );
+  };
+};
+mainwindows = {
+  2 = { 
+    first_line = "1";
+    lines = "45";
+    first_column = "0";
+    columns = "176";
+  };
 };
