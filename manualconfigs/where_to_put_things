@@ -1,0 +1,9 @@
+AccountsService		/var/lib/
+space-1.jpg		/usr/share/lightdm-webkit/themes/lightdm-webkit-theme-aether/src/img/wallpapers/
+mkinitcpio.conf		/etc/
+plymouthd.conf 		/etc/plymouth/
+# mkinitcpio -p linux
+display.conf		/etc/X11/xorg.conf.d/
+reflector.service	/etc/systemd/system/
+reflector.timer		/etc/systemd/system/
+# systemctl enable reflector.timer

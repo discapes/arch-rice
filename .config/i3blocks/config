@@ -1,0 +1,79 @@
+separator_block_width=14
+
+[ipv4]
+label= 
+command= echo "$(ip addr | grep enp1s0 | grep inet | awk '{print $2}')"
+interval=60
+color=#73D2F3
+
+[battery]
+label= 
+command=cat /sys/class/power_supply/BAT1/capacity
+interval=30
+color=#26BAEE
+
+#[ipv6]
+#label=ipv6:
+#command= echo "$(ip addr |  grep inet6 | awk 'FNR == 2 {print $2}')"
+#interval=60
+#color=#00ff00
+
+[disk-root]
+label= 
+command=/usr/lib64/i3blocks/disk/disk /
+interval=30
+color=#DEFCFC
+
+
+#[disk-home]
+#label=:
+#command=/usr/lib64/i3blocks/disk/disk $HOME
+#interval=30
+#color=#859900
+
+#[ssid]
+#label=
+#command=echo "$(iw dev wlo1 link | grep SSID | cut -d " " -f 2-)"
+#color=#d33682
+#interval=5
+
+#[wireless]
+#instance=wlo1
+#command=/usr/lib64/i3blocks/network
+#color=#00FF00
+#interval=10
+
+#[strength]
+#command=echo "$(iw dev wlo1 link | grep signal | cut -d " " -f 2-)"
+#interval§=10
+#color=#cb4b16
+
+
+
+[load]
+label=  
+command=/usr/lib64/i3blocks/load_average/load_average
+interval=5
+color=#9FE8FA
+
+
+[temp]
+label= 
+command=echo "$(sensors | grep "Core 0" | awk '{print $3}')"
+interval=10
+color=#CBF1F5
+
+[volume]
+label= 
+command=/usr/lib64/i3blocks/volume/volume
+instance=Master
+interval=once
+signal=10
+color=#A6E3E9
+
+
+[time]
+label= 
+command=date '+%a %d-%m-%y %l:%M:%S %p'
+interval=1
+color=#FFE6EB
