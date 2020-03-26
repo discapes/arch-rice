@@ -9,13 +9,13 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-exec --no-startup-id setxkbmap fi
+exec --no-startup-id setxkbmap us
 
 exec --no-startup-id unclutter & 
 
 exec --no-startup-id compton -b
 
-exec --no-startup-id wal -i desktops/wallpaper5.jpg -a 20
+exec --no-startup-id wal -i ~/.config/wallpapers/skimountain.png -a 80 && ~/.config/i3blocks/config.sh
 
 bindsym XF86AudioRaiseVolume exec amixer set Master 5%+ && pkill -RTMIN+10 i3blocks
 
@@ -23,14 +23,20 @@ bindsym XF86AudioLowerVolume exec amixer set Master 5%- && pkill -RTMIN+10 i3blo
 
 bindsym XF86AudioMute exec amixer set Master toggle && pkill -RTMIN+10 i3blocks
 
-bindsym $mod+w		exec --no-startup-id wal -i desktops --iterative -a 20
+#bindsym $mod+w		exec --no-startup-id wal -i desktops --iterative -a 80
 
-bindsym $mod+Shift+w	exec --no-startup-id wal -i desktops/wallpaper5.jpg -a 20
+bindsym $mod+w		exec --no-startup-id ~/.config/scripts/colorscheme-picker -d ~/.config/wallpapers/ || ~/.config/i3blocks/config.sh && i3-msg restart
+
+bindsym $mod+Shift+w	exec --no-startup-id wal -i ~/.config/wallpapers/skimountain.png -a 80 && ~/.config/i3blocks/config.sh && i3-msg restart
+
+exec --no-startup-id xrdb ~/.cache/wal/colors.Xresources
+
+exec --no-startup-id ~/.config/i3blocks/config.sh
 
 #Needed for i3-gaps
 #hide_edge_borders both
 for_window [class="^.*"] border pixel 0 
-gaps inner 60
+gaps inner 20
 gaps outer 0
 
 bindsym $mod+z		gaps outer current plus 5
@@ -119,25 +125,35 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-set $ws1 "" 
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws0 "0"
+#set $ws1 "" 
 # Terminals
-set $ws2 "" 
+#set $ws2 "" 
 # Browser
-set $ws3 "" 
+#set $ws3 "" 
 # Games
-set $ws4 "" 
+#set $ws4 "" 
 # Youtube
-set $ws5 "" 
+#set $ws5 "" 
 # Music
-set $ws6 "" 
+#set $ws6 "" 
 # IRC
-set $ws7 "" 
+#set $ws7 "" 
 # E-mail
-set $ws8 "8" 
+#set $ws8 "8" 
 # 8
-set $ws9 "9" 
+#set $ws9 "9" 
 # 9
-set $ws10 "0" 
+#set $ws0 "0" 
 # 10
 
 # switch to workspace
@@ -150,7 +166,7 @@ bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
-bindsym $mod+0 workspace $ws10
+bindsym $mod+0 workspace $ws0
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace  $ws1
@@ -218,17 +234,20 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 # finds out, if available)
 #                 RRGGBBAA
 
-#set $ws2 "1 "           # With the icon copy/pasted from the cheatsheet
 
-bar {	
+set_from_resource $barbg barbg
+bar {
+	id bar-1
+	position top
+# sudo find / | grep .Xres	
 	i3bar_command i3bar --transparency
-	colors {
-           background #00000020
-	   focused_workspace #CBF1F5 #CBF1F5 #00000000
-	   inactive_workspace #00000000 #00000000 #CBF1F5
-        }
 	font xft:Bitstream Vera Sans Mono:size=12, FontAwesome 12
 	status_command i3blocks
+	colors {
+	   background $barbg
+	   focused_workspace #CBF1F5 #CBF1F5 $barbg
+	   inactive_workspace $barbg $barbg #CBF1F5
+        }
 }
 
 # set display hdmi-0
@@ -245,16 +264,17 @@ bindsym $mod+F11 exec pamixer -d 5
 bindsym $mod+shift+F12 exec pamixer --set-volume 0
 
 # Auto exec settings
-exec urxvt
+# exec urxvt
 
 #            EDIT THIS SO IT FIT YOUR NEEDS
 # ======================================================
 
 # Set Swedish keyboard 
-#exec setxkbmap fi
+#exec setxkbmap us
 
 # Set resoultion
 #exec xrandr --output VGA-1 --mode 1920x1080
 
 # ======================================================
 
+bindsym $mod+x exec $HOME/.config/scripts/lock.sh

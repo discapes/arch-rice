@@ -1,0 +1,19 @@
+# GIMP action-history
+
+(history-item "file-export" 4)
+(history-item "image-resize" 3)
+(history-item "image-scale" 3)
+(history-item "select-invert" 0)
+(history-item "edit-clear" 1)
+(history-item "select-none" 1)
+(history-item "view-zoom-fit-in" 0)
+(history-item "filters-gaussian-blur" 0)
+(history-item "file-save-as" 1)
+(history-item "file-open" 0)
+(history-item "view-zoom-fill" 0)
+(history-item "select-all" 0)
+(history-item "file-export-as" 0)
+(history-item "layers-duplicate" 0)
+(history-item "file-quit" 1)
+
+# end of action-history

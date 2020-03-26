@@ -17,4 +17,6 @@ alias neoncava='cava -p ~/.config/cava/neonconfig'
 
 alias rainycava='cava -p ~/.config/cava/rainyconfig'
 
+alias vim="nvim "
+
 alias shut='shutdown now'

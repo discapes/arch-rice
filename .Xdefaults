@@ -1,14 +1,14 @@
 URxvt.intensityStyles:	true
-!URxvt.background:       #000000
 URxvt.depth:		32
-urxvt*font:             xft:Bitstream Vera Sans Mono:size=12
+urxvt*font:             xft:Inconsolata:pixelsize=20:antialias=true:autohint=true
+!urxvt*font:             xft:Bitstream Vera Sans Mono:size=12
 URxvt.scrollBar:	false
 URxvt.borderColor:      #333333
 URxvt.internalBorder:   20
 URxvt.bell:             false
 URxvt.letterSpace: 0
 URxvt.lineSpace: 0
-#URxvt.cursorUnderline: true
+!URxvt.cursorUnderline: true
 URxvt.cursorBlink:  true
 URxvt.saveLines: 1000
 
@@ -89,3 +89,4 @@ rofi.color-window: *background, *background, *background
 rofi.color-normal: *background, *foreground, *background, *background, *color1
 rofi.color-active: *background, *foreground, *background, *background, *color1
 rofi.color-urgent: *background, *foreground, *background, *background, *color1
+

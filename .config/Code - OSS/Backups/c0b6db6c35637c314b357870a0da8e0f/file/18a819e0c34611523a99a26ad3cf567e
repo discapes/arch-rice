@@ -1,0 +1,13 @@
+file:///home/miika/code/code.cpp {"mtime":1576440517979,"ctime":1576440248096,"size":212,"etag":"34b7lblfa6q","orphaned":false}
+    #include <iostream>
+    using namespace std;
+    int main() 
+    {
+        bool x = true;
+        if (x == true) {
+            cout << "Hello, World!";
+            return 0;
+        }
+        return 1;
+    }
+:
