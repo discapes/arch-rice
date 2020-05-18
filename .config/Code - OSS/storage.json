@@ -1381,13 +1381,13 @@
     "themeBackground": "#0d0f31",
     "windowsState": {
         "lastActiveWindow": {
-            "backupPath": "/home/miika/.config/Code - OSS/Backups/1583760311041",
+            "backupPath": "/home/miika/.config/Code - OSS/Backups/1585259802093",
             "uiState": {
                 "mode": 1,
-                "x": 713,
-                "y": 65,
-                "width": 588,
-                "height": 613
+                "x": 20,
+                "y": 45,
+                "width": 1326,
+                "height": 703
             }
         },
         "openedWindows": []

@@ -9,6 +9,8 @@ alias ls='ls --color=auto'
 # PS1='[\u@\h \W]\$ '
 PS1='(\W) \$ '
 
+export EDITOR="vim"
+
 cat ~/.cache/wal/sequences
 
 alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'

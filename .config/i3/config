@@ -9,11 +9,11 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
+exec --no-startup-id compton -b
+
 exec --no-startup-id setxkbmap us
 
 exec --no-startup-id unclutter & 
-
-exec --no-startup-id compton -b
 
 exec --no-startup-id wal -i ~/.config/wallpapers/skimountain.png -a 80 && ~/.config/i3blocks/config.sh
 
@@ -234,19 +234,20 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 # finds out, if available)
 #                 RRGGBBAA
 
-
+set_from_resource $color1 color1
+#color1 replaced CBF1F5
 set_from_resource $barbg barbg
+# use sudo find / | grep .Xres to find the pywal template, add *barbg: {background}CC
 bar {
 	id bar-1
 	position top
-# sudo find / | grep .Xres	
 	i3bar_command i3bar --transparency
 	font xft:Bitstream Vera Sans Mono:size=12, FontAwesome 12
 	status_command i3blocks
 	colors {
 	   background $barbg
-	   focused_workspace #CBF1F5 #CBF1F5 $barbg
-	   inactive_workspace $barbg $barbg #CBF1F5
+	   focused_workspace $color1 $color1 $barbg
+	   inactive_workspace $barbg $barbg $color1
         }
 }
 

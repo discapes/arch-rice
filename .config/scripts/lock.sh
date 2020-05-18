@@ -22,7 +22,7 @@ tmpbg='/tmp/screen.png'
 (( $# )) && { icon=$1; }
  
 scrot "$tmpbg"
-convert "$tmpbg" -blur 0x3 "$tmpbg"
+convert "$tmpbg" -brightness-contrast -20x-20 -blur 0x3 "$tmpbg"
 #convert "$tmpbg" -scale 10% -scale 1000% "$tmpbg"
 convert "$tmpbg" "$icon" -gravity center -composite -matte "$tmpbg"
 #convert "$tmpbg" -blur 0x3 "$tmpbg"

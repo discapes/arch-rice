@@ -6,7 +6,7 @@ separator_block_width=14
 label= 
 command= hostname -i
 #command= echo \"\$(ip addr | grep enp1s0 | grep inet | awk '{print \$2}')\"
-interval=60
+interval=5
 color=$color8
 
 [battery]

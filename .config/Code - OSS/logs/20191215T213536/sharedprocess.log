@@ -1,8 +1,0 @@
-[2019-12-15 21:35:40.887] [sharedprocess] [info] main {"machineId":"6f29d617ca34c5b75b0a64bf4dcc6b71b9ffa3c198832bcd2631d115da38d9b8","windowId":2}
-[2019-12-15 21:35:52.075] [sharedprocess] [info] Installing extension: juanmnl.vscode-theme-1984
-[2019-12-15 21:35:52.585] [sharedprocess] [info] Downloaded extension: juanmnl.vscode-theme-1984 /tmp/ba199f41-ddc6-49f1-9fdb-28a7d35a8a1c
-[2019-12-15 21:35:53.086] [sharedprocess] [info] Extracted extension to /home/miika/.vscode-oss/extensions/.juanmnl.vscode-theme-1984-0.0.38: juanmnl.vscode-theme-1984
-[2019-12-15 21:35:53.087] [sharedprocess] [info] Renamed to /home/miika/.vscode-oss/extensions/juanmnl.vscode-theme-1984-0.0.38
-[2019-12-15 21:35:53.099] [sharedprocess] [info] Installation completed. juanmnl.vscode-theme-1984
-[2019-12-15 21:35:53.151] [sharedprocess] [info] Extensions installed successfully: juanmnl.vscode-theme-1984
-[2019-12-15 21:36:20.871] [sharedprocess] [info] Starting to clean up unused language packs.
